@@ -7,9 +7,9 @@ namespace COMP003B.Assignment6.Models
         public int ArtistId { get; set; }
 
         [Required]
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty; //Attributes for this class
         public int FollowerCount { get; set; }
 
-        public virtual ICollection<SongArtist>? SongArtists { get; set; } = new List<SongArtist>();
+        public virtual ICollection<SongArtist>? SongArtists { get; set; } = new List<SongArtist>(); //Connects with the main song artist class
     }
 }

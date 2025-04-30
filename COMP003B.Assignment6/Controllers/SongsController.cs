@@ -40,7 +40,7 @@ namespace COMP003B.Assignment6.Controllers
                 return NotFound();
             }
 
-            ViewBag.Artists = from s in _context.Songs
+            ViewBag.Artists = from s in _context.Songs //This connects most of the vaiables together
                               join sa in _context.SongArtists on s.SongId equals sa.SongId
                               join a in _context.Artists on sa.ArtistId equals a.ArtistId
                               where s.SongId == id
